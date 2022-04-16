@@ -1,0 +1,40 @@
+{
+  "countries": [
+    {
+      "country": "Irak",
+      "id": 1
+    }
+  ],
+  "cities": [
+    {
+      "city": "Uganda",
+      "country": "USA",
+      "population": "2500000",
+      "id": 1
+    },
+    {
+      "city": "Chikodi",
+      "country": "India",
+      "population": "120000",
+      "id": 2
+    },
+    {
+      "city": "Uganda",
+      "country": "Africa",
+      "population": "120000",
+      "id": 3
+    },
+    {
+      "city": "EXAMBA",
+      "country": "Africa",
+      "population": "15000000",
+      "id": 4
+    },
+    {
+      "city": "arab",
+      "country": "Irak",
+      "population": "15000000",
+      "id": 5
+    }
+  ]
+}

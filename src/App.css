@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+*{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+table{
+  width: 85%;
+  margin: 2% auto;
+  border-radius: 6px;
+}
+
+th{
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+form{
+  width: 30%;
+  height: 350px;
+  border: 1px solid teal;
+  padding: 2%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+  background: whitesmoke;
+  border-radius: 3%;
+}
+
+form input, form select{
+width: 90%;
+height: 40px;
+font-size: 18px;
+font-weight: 600;
+}
+
+form input:last-child{
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.cityDiv{
+  width: 30%;
+  height: 125px;
+  padding: 2%;
+  border: 1px solid teal;
+  border-radius: 6px;
+  margin:2% auto;
+  display: flex;
+  gap: 2.5%;
+  align-items: center;
+  background-color:whitesmoke
+}
+
+.cityDiv input{
+  width: 65%;
+  font-weight: 600;
+  height: 35px;
+  font-size: 16px;
+}
+.cityDiv button{
+  height: 35px;
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.buttons{
+  width: 70%;
+  margin: 3% auto;
+  display: flex;
+  gap: 1%;
+} 
+
+#window .editables{
+  background-color:whitesmoke;
+}
+
+#window form div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#window form div input{
+  width: 75%;
+  color: green;
+}
+#window form {
+  font-size: 16px;
+  font-weight: 600;
+}
