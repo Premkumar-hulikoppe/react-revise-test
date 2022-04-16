@@ -7,6 +7,7 @@ import {filterData} from "../../Redux/Data/action.js"
 import {useState} from "react";
 import { addData } from "../../Redux/Data/action.js";
 import {EditWindow} from "../Home/editWindow";
+import {srtPopAsc, srtPopDesc} from "../../Redux/Data/action.js";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export const Home = () => {
     fetch(`http://localhost:3004/cities/?country=${e}`).then((res) => res.json())
     .then((data) => {
       if(data.length === 0){
-        // alert("No Results Found!");
+        alert("No Results Found!");
         console.log(data)
       }
       else{
@@ -35,11 +36,12 @@ export const Home = () => {
 
   return show ?  <EditWindow show = {show} setshow = {setshow} toggleShow = {toggleShow} item = {item}/> : (
     <>
+
       <div className="buttons">
-        <Button variant="contained" color="primary">
+        <Button onClick = {() => {dispatch(srtPopAsc())}} variant="contained" color="primary">
           Sort By Population (ASC)
         </Button>
-        <Button variant="contained" color="success">
+        <Button onClick = {() => {dispatch(srtPopDesc())}} variant="contained" color="success">
         Sort By Population (DSC)
         </Button>
 
