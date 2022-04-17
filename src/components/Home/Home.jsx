@@ -22,7 +22,8 @@ export const Home = () => {
 
 
   const handleFilter = (e) => {
-    fetch(`http://localhost:3004/cities/?country=${e}`).then((res) => res.json())
+    const str = e.toLowerCase();
+    fetch(`https://big-geode-ski.glitch.me/cities/?country=${str}`).then((res) => res.json())
     .then((data) => {
       if(data.length === 0){
         alert("No Results Found!");

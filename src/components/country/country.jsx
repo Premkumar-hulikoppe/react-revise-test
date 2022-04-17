@@ -7,7 +7,7 @@ export const Countries = () => {
       const {id, value} = e.target;
       setcountry({
           ...country,
-          [id] : value
+          [id] : value.toLowerCase()
       });
   }
 
@@ -19,7 +19,7 @@ export const Countries = () => {
       }
       else{
           
-          fetch("http://localhost:3004/countries", {
+          fetch("https://big-geode-ski.glitch.me/countries", {
               method: "POST",
               body: JSON.stringify({...country}),
               headers: {'content-type': 'application/json'}

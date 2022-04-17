@@ -7,7 +7,7 @@ export const EditWindow = ({ item, show, setshow, toggleShow }) => {
   const dispatch = useDispatch();
 
   const getData = () => {
-    fetch("http://localhost:3004/cities")
+    fetch("https://big-geode-ski.glitch.me/cities")
       .then((res) => res.json())
       .then((value) => dispatch(addData(value)));
   };
@@ -18,7 +18,10 @@ export const EditWindow = ({ item, show, setshow, toggleShow }) => {
   
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
+    var { id, value } = e.target;
+    if(id === "city" || id === "country"){
+      value = value.toLowerCase();
+    }
     setquery({
       ...query,
       [id]: value,
@@ -29,7 +32,7 @@ console.log(item.id);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3004/cities/${item.id}`, {
+    fetch(`https://big-geode-ski.glitch.me/cities/${item.id}`, {
       method: "PATCH",
       body: JSON.stringify({...query}),
       headers: {

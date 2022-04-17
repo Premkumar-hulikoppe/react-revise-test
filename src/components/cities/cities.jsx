@@ -10,7 +10,7 @@ export const Cities = () => {
   const dispatch = useDispatch();
 
   const getCountries = () => {
-    fetch("http://localhost:3004/countries")
+    fetch("https://big-geode-ski.glitch.me/countries")
       .then((res) => res.json())
       .then((data) => dispatch(addCountry(data)));
   };
@@ -22,13 +22,13 @@ export const Cities = () => {
   const handleChange = (e) => {
     setcity({
       ...city,
-      [e.target.id]: e.target.value,
+      [e.target.id]: e.target.value.toLowerCase(),
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3004/cities", {
+    fetch("https://big-geode-ski.glitch.me/cities", {
       method: "POST",
       body: JSON.stringify(city),
       headers: {

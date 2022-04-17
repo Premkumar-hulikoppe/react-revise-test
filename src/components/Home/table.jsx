@@ -8,13 +8,13 @@ import {useSelector, useDispatch} from "react-redux";
   const dispatch = useDispatch();
 
   const getData = () => {
-    fetch("http://localhost:3004/cities")
+    fetch("https://big-geode-ski.glitch.me/cities")
       .then((res) => res.json())
       .then((value) => dispatch(addData(value)));
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3004/cities/${id}`, {
+    fetch(`https://big-geode-ski.glitch.me/cities/${id}`, {
       method: "DELETE"
     })
     .then(alert("Proceed To Delete ?"))
